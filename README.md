@@ -55,7 +55,7 @@ Essa ferramenta foi transformada em um processo automático, com a execução do
 
 ### 4.1 Módulos python
 
-Os módulos similaridade_por_descricao_mat_codigo_oficial.py e similaridade_por_descricao_mat_codigo_oficial são o core da aplicação, suas funcionalidades principais são:
+Os módulos similaridade_por_descricao_mat_codigo_oficial.py e similaridade_por_descricao_med_codigo_oficial são o core da aplicação, suas funcionalidades principais são:
 
 **4.1.1 Conexão e leitura de dados**:
   - Integração com banco de dados Oracle e leitura de arquivos Excel.
