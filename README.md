@@ -2,7 +2,6 @@
 
 ## **1.0 Visão geral**
 
-Contexto
 Em redes hospitalares, é comum o processo de expansão por meio da aquisição de novos hospitais, os chamados projetos Brownfield. Entretanto, um dos principais desafios dessa integração é a padronização dos cadastros hospitalares, especialmente quando o hospital adquirido utiliza um sistema de gestão diferente do padrão da rede.
 
 Durante o processo de integração, é necessário alinhar os cadastros de itens e serviços hospitalares para garantir consistência nos processos de faturamento. A utilização incorreta de códigos de cobrança — por divergência na descrição ou estrutura dos cadastros — pode gerar glosas de codificação, ou seja, recusas de pagamento pelos convênios devido ao uso de códigos não negociados.
