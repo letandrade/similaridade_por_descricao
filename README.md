@@ -2,15 +2,12 @@
 
 ## **1.0 Visão geral**
 
-No ramo da prestação de serviços de saúde é comum ouvir falar sobre glosa hospitalar. As glosas correspondem a valores de faturamento que não são recebidos ou são recusados pelas operadoras de saúde (convênios), geralmente devido a problemas de comunicação ou inconsistências nas informações fornecidas pelo prestador. 
+Contexto
+Em redes hospitalares, é comum o processo de expansão por meio da aquisição de novos hospitais, os chamados projetos Brownfield. Entretanto, um dos principais desafios dessa integração é a padronização dos cadastros hospitalares, especialmente quando o hospital adquirido utiliza um sistema de gestão diferente do padrão da rede.
 
-Na maioria das vezes, as glosas ocorrem quando os dados enviados pelo prestador não coincidem com os registros da operadora. Por isso, evitar glosas é fundamental para manter a eficiência na gestão financeira das instituições de saúde.
+Durante o processo de integração, é necessário alinhar os cadastros de itens e serviços hospitalares para garantir consistência nos processos de faturamento. A utilização incorreta de códigos de cobrança — por divergência na descrição ou estrutura dos cadastros — pode gerar glosas de codificação, ou seja, recusas de pagamento pelos convênios devido ao uso de códigos não negociados.
 
-Diante da relevância desse tema, propõe-se a criação de um modelo de regras de associação.
-
-Este projeto aplica uma técnica de aprendizado de máquina não supervisionado, com foco na criação de regras de associação (Apriori), para analisar padrões recorrentes em glosas hospitalares.
-
-Para este caso específico, o objetivo das regras é Identificar variáveis que frequentemente ocorrem juntas em casos de glosa, como tipo de despesa, tipo de atendimento, grupo e setor (nível 1 e 2). Essa abordagem possibilita compreender os principais fatores associados às glosas, tornando a análise mais estratégica e contribuindo para a redução de glosas e otimização do faturamento hospitalar.
+Este projeto apresenta uma solução baseada em Python que automatiza a identificação de similaridade entre os cadastros do hospital adquirido e o cadastro padrão da rede. O código analisa as descrições dos itens, calculando a similaridade textual entre elas. A melhor correspondência encontrada é utilizada para sugerir o código correto que deve ser utilizado no novo hospital.
 
 ## **2.0 Objetivos técnicos**
 
