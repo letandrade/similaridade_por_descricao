@@ -88,6 +88,10 @@ Os módulos similaridade_por_descricao_mat_codigo_oficial.py e similaridade_por_
 
 Para automatizar a execução do módulo foi criada uma aplicação no power automated que executa o módulo python através do prompt de comando da máquina local. 
 
+<img width="486" alt="1" src="https://github.com/user-attachments/assets/9f13c488-6e7e-4594-af67-89b0743b7d8b" />
+
+<img width="486" alt="2" src="https://github.com/user-attachments/assets/c381968c-48e4-40ed-a98e-26a229c11a1c" />
+
 **4.5.2 Pasta local**
 
 Na pasta local o usário preenche um template com as informações do novo hospital (Hospital, Código da tabela própria, Descrição do item, Valor), essas informação vão ser importadas no script. 
