@@ -78,7 +78,7 @@ Os módulos similaridade_por_descricao_mat_codigo_oficial.py e similaridade_por_
 
 ### 4.5 Fluxo de execução da ferramenta 
 
-![image](https://github.com/user-attachments/assets/9fef4416-1a70-498c-a434-eadc44753f39)
+<img src="![image](https://github.com/user-attachments/assets/7c215a19-d679-4e35-83e8-4c40b0bdb3d3)" width="400"/>
 
 **4.5.1 Power Automate**
 
