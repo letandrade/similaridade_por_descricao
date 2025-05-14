@@ -48,9 +48,7 @@ Essa rotina de criação dos modelos foi transformada em um processo automático
   
 ## **4.0 Desenvolvimento**
 
-Todos os passos a seguir estão detalhados nos módulos em anexo.
-
-Os módulos similaridade_por_descricao_mat_codigo_oficial.py  e similaridade_por_descricao_mat_codigo_oficial aplicam .........
+Os módulos similaridade_por_descricao_mat_codigo_oficial.py  e similaridade_por_descricao_mat_codigo_oficial são o core da aplicação e trazem em detalhes os passoa a seguir.
 
 Funcionalidades principais:
 
