@@ -79,8 +79,8 @@ Os módulos similaridade_por_descricao_mat_codigo_oficial.py e similaridade_por_
 
 **4.1.4 Geração de resultados**:
 
-    - União dos dados com códigos e valores oficiais.
-    - Exportação do resultado final em Excel, com os códigos sugeridos para cobrança.
+- União dos dados com códigos e valores oficiais.
+- Exportação do resultado final em Excel, com os códigos sugeridos para cobrança.
 
 ### 4.5 Fluxo de execução da ferramenta 
 
