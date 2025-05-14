@@ -43,26 +43,18 @@ Essa rotina de criação dos modelos foi transformada em um processo automático
 
 Todos os passos a seguir estão detalhados nos módulos e arquivos de texto em anexo.
 
-### **4.1 Construção da base de dados em SQL**
-
-A base de dados foi extraída de um banco de dados, esse script faz a seleção e tratamento de variáveis. 
-
-A query construída foi chamada através da conexão com o banco de dados Oracle executada através da biblioteca cx_oracle.
-
-### **4.2 Desenvolvimento**
-
 O módulo modulo_apriori_hospital_recente.py aplica o algoritmo Apriori para identificar padrões recorrentes em glosas hospitalares. Ele analisa combinações frequentes de variáveis como tipo de despesa, setor, grupo e tipo de atendimento — por hospital, convênio e tipo de glosa — para apoiar ações estratégicas de auditoria e redução de glosas.
 
 Funcionalidades principais:
 
-**Conexão e leitura de dados**:
+**4.1 Conexão e leitura de dados**:
   - Integração com banco de dados Oracle e leitura de arquivos Excel.
   - Importação de dados do hospital adquirido e da base padrão.
 
-**Pré-processamento das descrições**:
+**4.2 Pré-processamento das descrições**:
   - Remoção de acentos, caracteres especiais, stop words e padronização textual.
 
-**Cálculo de similaridade**:
+**4.3 Cálculo de similaridade**:
   - Comparação baseada em múltiplos critérios:
     - Quantidade de palavras em comum.
     - Peso das primeiras palavras.
@@ -70,11 +62,11 @@ Funcionalidades principais:
     - Similaridade por sequência de caracteres (via `SequenceMatcher`).
   - Cálculo de **score final de similaridade** e priorização dos pares mais relevantes.
 
-**Geração de resultados**:
+**4.4 Geração de resultados**:
   - União dos dados com códigos e valores oficiais.
   - Exportação do resultado final em Excel, com os códigos sugeridos para cobrança.
 
-**Tecnologias utilizadas**
+**4.5 Tecnologias utilizadas**
 
 - Python 3.x
 - Pandas
