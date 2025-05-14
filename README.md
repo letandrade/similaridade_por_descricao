@@ -47,7 +47,7 @@ Essa ferramenta foi transformada em um processo automático, com a execução do
   
 ## **4.0 Desenvolvimento**
 
-### 4.1 Módulos python**
+### 4.1 Módulos python
 
 Os módulos similaridade_por_descricao_mat_codigo_oficial.py e similaridade_por_descricao_mat_codigo_oficial são o core da aplicação, suas funcionalidades principais são:
 
@@ -72,8 +72,8 @@ Os módulos similaridade_por_descricao_mat_codigo_oficial.py e similaridade_por_
     - (Similaridade de palavras * 5 + Similaridade das primeiras palavras * 2 + Similaridade de medidas * 3) / 10
 
 **4.1.4 Geração de resultados**:
-  - União dos dados com códigos e valores oficiais.
-  - Exportação do resultado final em Excel, com os códigos sugeridos para cobrança.
+    - União dos dados com códigos e valores oficiais.
+    - Exportação do resultado final em Excel, com os códigos sugeridos para cobrança.
 
 ### 4.5 Fluxo de execução da ferramenta 
 
