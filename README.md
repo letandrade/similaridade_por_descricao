@@ -29,6 +29,8 @@ Essa ferramenta foi transformada em um processo automático, com a execução do
 
 ## **3.0 Ferramentas utilizadas**
 
+![image](https://github.com/user-attachments/assets/9fef4416-1a70-498c-a434-eadc44753f39)
+
 - Pasta local: Repositório de dados input no script. 
 
 - SQL: Utilizado para construção da bases de dados de cadastro padão.
