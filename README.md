@@ -34,6 +34,13 @@ Essa rotina de criação dos modelos foi transformada em um processo automático
 - SQL: Utilizado para construção da bases de dados de cadastro padão.
 
 - Python: Utilizado para o processamento dos dados. É importante dizer que foi utilizado o ambiente Anaconda.
+- Python 3.x
+- Pandas
+- Numpy
+- NLTK
+- cx_Oracle
+- Regex
+- Difflib (SequenceMatcher)
 
 - Power Automate: Responsável pela automação da execução do script Python via prompt de comando (CMD).
 
@@ -66,17 +73,7 @@ Funcionalidades principais:
   - União dos dados com códigos e valores oficiais.
   - Exportação do resultado final em Excel, com os códigos sugeridos para cobrança.
 
-**4.5 Tecnologias utilizadas**
 
-- Python 3.x
-- Pandas
-- Numpy
-- NLTK
-- cx_Oracle
-- Regex
-- Difflib (SequenceMatcher)
-
-## 📁 Estrutura do projeto
 
 ### **4.4 Agendamento do script de loop no Windows**
 
