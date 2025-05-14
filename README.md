@@ -1,1 +1,1 @@
-# similaridade_por_descricao
+# Similaridade por descrição
