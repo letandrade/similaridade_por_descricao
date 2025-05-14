@@ -28,7 +28,7 @@ Essa ferramenta foi transformada em um processo automático, com a execução do
 
 ## **3.0 Ferramentas utilizadas**
 
-<img src="![ChatGPT Image 14 de mai  de 2025, 14_44_03](https://github.com/user-attachments/assets/a509fb5d-3588-4026-8677-441fea04f59e)" width="800"/>
+<img src="https://github.com/user-attachments/assets/a509fb5d-3588-4026-8677-441fea04f59e" width="800"/>
 
 - Pasta local: Repositório de dados input no script. 
 
