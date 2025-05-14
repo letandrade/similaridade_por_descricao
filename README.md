@@ -78,6 +78,7 @@ Os módulos similaridade_por_descricao_mat_codigo_oficial.py e similaridade_por_
     - (Similaridade de palavras * 5 + Similaridade das primeiras palavras * 2 + Similaridade de medidas * 3) / 10
 
 **4.1.4 Geração de resultados**:
+
     - União dos dados com códigos e valores oficiais.
     - Exportação do resultado final em Excel, com os códigos sugeridos para cobrança.
 
