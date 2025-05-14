@@ -80,7 +80,6 @@ Os módulos similaridade_por_descricao_mat_codigo_oficial.py e similaridade_por_
 
 <img src="https://github.com/user-attachments/assets/be374229-017f-4c6e-9d7a-e7c486ee1a86" width="800"/>
 
-
 **4.5.1 Power Automate**
 
 Para automatizar a execução do módulo foi criada uma aplicação no power automated que executa o módulo python através do prompt de comando da máquina local. 
@@ -92,10 +91,6 @@ Na pasta local o usário preenche um template com as informações do novo hospi
 **4.5.3 Teams**
 
 Após preencher o template, o usuário digita uma palavra chave no grupo do teams e inicia a execução do script python. 
-
-
-Funcionalidades principais:
-
 
 ## **5.0 Resultados**
 
