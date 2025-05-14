@@ -21,11 +21,11 @@ Desenvolver uma ferramenta autônoma capaz de calcular a similaridade textual en
 
 - Apoiar o processo de padronização de cadastros durante a integração de novos hospitais.
 
-A ferramenta utiliza algoritmos de processamento de linguagem natural (PLN) e técnicas de matching textual para identificar a melhor correspondência entre descrições, entregando como resultado a sugestão de item equivalente e seu respectivo código no sistema padrão.
+A ferramenta utiliza bibliotecas de processamento de linguagem natural (NLP) e técnicas de matching textual para identificar a melhor correspondência entre descrições, entregando como resultado a sugestão de item equivalente e seu respectivo código no sistema padrão.
 
-Essa rotina de criação dos modelos foi transformada em um processo automático, com a execução do script Python agendada por meio do Agendador de Tarefas do Windows, garantindo a atualização periódica dos dados sem necessidade de intervenção manual.
+Essa ferramenta foi transformada em um processo automático, com a execução do script Python via prompt de comando( CMD) acioando pelo Power Automate, garantindo a extração dos itens similares sem necessidade de intervenção manual.
 
-É importante dizer que foram desenvolvidos dois scripts, uma para materiais e outra para medicamentos, considerando que os itens possuem características unicas que devem ser consideradas no script. 
+É importante dizer que foram desenvolvidos dois scripts, uma para materiais e outro para medicamentos, considerando que os itens possuem características unicas que devem ser consideradas no desenvolvimento.
 
 ## **3.0 Ferramentas utilizadas**
 
@@ -33,14 +33,13 @@ Essa rotina de criação dos modelos foi transformada em um processo automático
 
 - SQL: Utilizado para construção da bases de dados de cadastro padão.
 
-- Python: Utilizado para o processamento dos dados. É importante dizer que foi utilizado o ambiente Anaconda.
-- Python 3.x
-- Pandas
-- Numpy
-- NLTK
-- cx_Oracle
-- Regex
-- Difflib (SequenceMatcher)
+- Python: Utilizado para o processamento dos dados. É importante dizer que foi utilizado o ambiente Anaconda com as seguintes bibliotecas:
+  - Pandas
+  - Numpy
+  - NLTK
+  - cx_Oracle
+  - Regex
+  - Difflib (SequenceMatcher)
 
 - Power Automate: Responsável pela automação da execução do script Python via prompt de comando (CMD).
 
