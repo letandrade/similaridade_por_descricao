@@ -48,18 +48,18 @@ Essa rotina de criação dos modelos foi transformada em um processo automático
   
 ## **4.0 Desenvolvimento**
 
-Os módulos similaridade_por_descricao_mat_codigo_oficial.py  e similaridade_por_descricao_mat_codigo_oficial são o core da aplicação e trazem em detalhes os passoa a seguir.
+**4.1 Módulos python**
 
-Funcionalidades principais:
+Os módulos similaridade_por_descricao_mat_codigo_oficial.py e similaridade_por_descricao_mat_codigo_oficial são o core da aplicação, suas funcionalidades principais são:
 
-**4.1 Conexão e leitura de dados**:
+**4.1.1 Conexão e leitura de dados**:
   - Integração com banco de dados Oracle e leitura de arquivos Excel.
   - Importação de dados do hospital adquirido (xlsx) e da base padrão (tabela no banco de dados).
 
-**4.2 Pré-processamento das descrições**:
+**4.1.2 Pré-processamento das descrições**:
   - Remoção de acentos, caracteres especiais, stop words e padronização textual.
 
-**4.3 Cálculo de similaridade**:
+**4.1.3 Cálculo de similaridade**:
 
   - Comparação baseada em múltiplos critérios:
     - Similaridade de palavras (apenas letras).
@@ -72,11 +72,24 @@ Funcionalidades principais:
  - Cálculo de **score final de similaridade para medicamentos**:
     - (Similaridade de palavras * 5 + Similaridade das primeiras palavras * 2 + Similaridade de medidas * 3) / 10
 
-**4.4 Geração de resultados**:
+**4.1.4 Geração de resultados**:
   - União dos dados com códigos e valores oficiais.
   - Exportação do resultado final em Excel, com os códigos sugeridos para cobrança.
 
 ### **4.5 Fluxo de execução da ferramenta **
+
+**4.5.1 Power Automate**
+
+Para automatizar a execução do módulo foi criada uma aplicação no power automated que executa o módulo python através do prompt de comando da máquina local. 
+
+**4.5.2 Pasta local**
+
+Na pasta local o usário preenche um template com as informações do novo hospital (Hospital, Código da tabela própria, Descrição do item, Valor), essas informação vão ser importadas no script. 
+
+**4.5.3 Teams**
+
+Após preencher o template, o usuário digita uma palavra chave no grupo do teams e inicia a execução do script python. 
+
 
 Funcionalidades principais:
 
