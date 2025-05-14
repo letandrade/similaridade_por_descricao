@@ -35,12 +35,17 @@ Essa ferramenta foi transformada em um processo automático, com a execução do
 - SQL: Utilizado para construção da bases de dados de cadastro padão.
 
 - Python: Utilizado para o processamento dos dados. É importante dizer que foi utilizado o ambiente Anaconda com as seguintes bibliotecas:
-  - Pandas
-  - Numpy
-  - NLTK
-  - cx_Oracle
-  - Regex
-  - Difflib (SequenceMatcher)
+    - cx_Oracle
+    - pandas
+    - numpy
+    - datetime
+    - os
+    - unidecode import unidecode
+    - nltk.corpus import stopwords
+    - collections import Counter, defaultdict
+    - nltk.tokenize import word_tokenize
+    - difflib import SequenceMatcher
+    - re
 
 - Power Automate: Responsável pela automação da execução do script Python via prompt de comando (CMD).
 
