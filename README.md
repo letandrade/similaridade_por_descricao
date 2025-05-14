@@ -1,4 +1,5 @@
-<h1 align="center"> Migração de Cadastros Hospitalares com Detecção de Similaridade <br /> </h1>
+<h1 align="center"> Migração de Cadastros Hospitalares 
+com Detecção de Similaridade <br /> </h1>
 
 ## **1.0 Visão geral**
 
