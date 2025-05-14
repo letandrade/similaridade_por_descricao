@@ -29,7 +29,7 @@ Essa ferramenta foi transformada em um processo automático, com a execução do
 
 ## **3.0 Ferramentas utilizadas**
 
-![image](https://github.com/user-attachments/assets/9fef4416-1a70-498c-a434-eadc44753f39)
+
 
 - Pasta local: Repositório de dados input no script. 
 
@@ -78,6 +78,8 @@ Os módulos similaridade_por_descricao_mat_codigo_oficial.py e similaridade_por_
     - Exportação do resultado final em Excel, com os códigos sugeridos para cobrança.
 
 ### 4.5 Fluxo de execução da ferramenta 
+
+![image](https://github.com/user-attachments/assets/9fef4416-1a70-498c-a434-eadc44753f39)
 
 **4.5.1 Power Automate**
 
