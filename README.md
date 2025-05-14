@@ -1,4 +1,4 @@
-<h1 align="center"> Similaridade por descrição <br /> </h1>
+<h1 align="center"> Similaridade por descrição de itens hospitalares <br /> </h1>
 
 ## **1.0 Visão geral**
 
