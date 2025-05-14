@@ -11,31 +11,33 @@ Este projeto apresenta uma solução baseada em Python que automatiza a identifi
 
 ## **2.0 Objetivos técnicos**
 
-Desenvolver modelos de regras de associação (Apriori) segmentados por hospital, convênio e tipo de glosa, com o objetivo de identificar padrões e facilitar a análise das principais causas de glosas.
+Desenvolver uma ferramenta autônoma capaz de calcular a similaridade textual entre descrições de itens hospitalares de diferentes bases de dados (hospital adquirido vs. padrão da rede), com o objetivo de:
 
-Foi implementada uma estrutura em loop, capaz de gerar automaticamente diferentes regras para cada combinação de hospital, operadora e tipo de glosa. Por exemplo:
+- Mapear automaticamente os itens do hospital novo aos itens do cadastro padrão;
 
-- Para a base de dados 1, referente ao Hospital A, da Operadora B e do Tipo de Glosa C, foram identificados 50 regras.
+- Apontar o código de sistema correto a ser utilizado para cobrança;
 
-- Já para a base de dados 2, correspondente ao Hospital E, da Operadora F e do Tipo de Glosa G, foram identificados 100 regras.
+- Minimizar o risco de glosas por codificação incorreta;
+
+- Apoiar o processo de padronização de cadastros durante a integração de novos hospitais.
+
+A ferramenta utiliza algoritmos de processamento de linguagem natural (PLN) e técnicas de matching textual para identificar a melhor correspondência entre descrições, entregando como resultado a sugestão de item equivalente e seu respectivo código no sistema padrão.
 
 Essa rotina de criação dos modelos foi transformada em um processo automático, com a execução do script Python agendada por meio do Agendador de Tarefas do Windows, garantindo a atualização periódica dos dados sem necessidade de intervenção manual.
 
-Além disso, um painel no Power BI será alimentado com os resultados dessas análises, permitindo o acompanhamento semanal da evolução das glosas, com foco na tomada de decisão mais rápida e estratégica por parte das áreas responsáveis.
+É importante dizer que foram desenvolvidos dois scripts, uma para materiais e outra para medicamentos, considerando que os itens possuem características unicas que devem ser consideradas no script. 
 
 ## **3.0 Ferramentas utilizadas**
 
-![{1743A47F-6D12-4614-BA3F-4EF85A242CC9}](https://github.com/user-attachments/assets/47abe4fb-2bea-4475-a92d-91fc4a766908)
+- Pasta local: Repositório de dados input no script. 
 
-- SQL: Utilizado para construção da bases de dados.
+- SQL: Utilizado para construção da bases de dados de cadastro padão.
 
-- Python: Utilizado para o processamento e modelagem dos dados, incluindo a criação dos modelos apriori e tratamento das bases segmentadas por hospital, operadora e tipo de glosa. É importante dizer que foi utilizado o ambiente Anaconda.
+- Python: Utilizado para o processamento dos dados. É importante dizer que foi utilizado o ambiente Anaconda.
 
-- Power Automate: Responsável pela automação da execução do script Python, garantindo que os modelos sejam atualizados de forma periódica e sem necessidade de intervenção manual.
+- Power Automate: Responsável pela automação da execução do script Python via prompt de comando (CMD).
 
-- Teams:
-
-- Power BI: Ferramenta utilizada para a visualização e monitoramento dos resultados. Os dados processados são integrados ao painel para acompanhamento semanal das glosas, facilitando a análise e as correções de glosa.
+- Teams: Criação de grupo para ser trigger do start da aplição no power automate.
   
 ## **4.0 Desenvolvimento**
 
@@ -47,37 +49,42 @@ A base de dados foi extraída de um banco de dados, esse script faz a seleção 
 
 A query construída foi chamada através da conexão com o banco de dados Oracle executada através da biblioteca cx_oracle.
 
-### **4.2 Análise de Glosas com Regras de Associação (Apriori)**
+### **4.2 Desenvolvimento**
 
 O módulo modulo_apriori_hospital_recente.py aplica o algoritmo Apriori para identificar padrões recorrentes em glosas hospitalares. Ele analisa combinações frequentes de variáveis como tipo de despesa, setor, grupo e tipo de atendimento — por hospital, convênio e tipo de glosa — para apoiar ações estratégicas de auditoria e redução de glosas.
 
 Funcionalidades principais:
 
-- Conexão automatizada com banco Oracle e carregamento segmentado de dados.
+**Conexão e leitura de dados**:
+  - Integração com banco de dados Oracle e leitura de arquivos Excel.
+  - Importação de dados do hospital adquirido e da base padrão.
 
-- Geração de regras de associação com o algoritmo Apriori.
+**Pré-processamento das descrições**:
+  - Remoção de acentos, caracteres especiais, stop words e padronização textual.
 
-- Cálculo de suporte, confiança e lift das regras.
+**Cálculo de similaridade**:
+  - Comparação baseada em múltiplos critérios:
+    - Quantidade de palavras em comum.
+    - Peso das primeiras palavras.
+    - Similaridade de medidas (alfa-numéricas e numéricas).
+    - Similaridade por sequência de caracteres (via `SequenceMatcher`).
+  - Cálculo de **score final de similaridade** e priorização dos pares mais relevantes.
 
-- Filtragem de regras redundantes.
+**Geração de resultados**:
+  - União dos dados com códigos e valores oficiais.
+  - Exportação do resultado final em Excel, com os códigos sugeridos para cobrança.
 
-- Inclusão automática do valor glosado, valor cobrado e índice de glosa por regra.
+**Tecnologias utilizadas**
 
-- Preparação de base final com as regras de associação.
+- Python 3.x
+- Pandas
+- Numpy
+- NLTK
+- cx_Oracle
+- Regex
+- Difflib (SequenceMatcher)
 
-### **4.3 Módulo de execução de funções**
-
-O módulo modulo_apriori_hospital_recente_loop.py automatiza a geração de regras de associação para glosas hospitalares utilizando o algoritmo Apriori, aplicado a combinações específicas de hospitais, convênios e tipos de glosa.
-
-Funcionalidades principais:
-
-- Carregamento de dados de hospitais e combinações válidas (hospital, convênio, tipo de glosa).
-
-- Execução de um loop que aplica, para cada combinação válida, um processo de análise utilizando o algoritmo Apriori.
-
-- Armazenamento e concatenação dos resultados em um único DataFrame.
-
-- Tratamento de valores nulos e exportação dos resultados consolidados para um arquivo CSV.
+## 📁 Estrutura do projeto
 
 ### **4.4 Agendamento do script de loop no Windows**
 
