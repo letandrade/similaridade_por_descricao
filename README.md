@@ -22,17 +22,15 @@ Desenvolver uma ferramenta autônoma capaz de calcular a similaridade textual en
 
 A ferramenta utiliza bibliotecas de processamento de linguagem natural (NLP) e técnicas de matching textual para identificar a melhor correspondência entre descrições, entregando como resultado a sugestão de item equivalente e seu respectivo código no sistema padrão.
 
-Essa ferramenta foi transformada em um processo automático, com a execução do script Python via prompt de comando( CMD) acioando pelo Power Automate, garantindo a extração dos itens similares sem necessidade de intervenção manual.
+Essa ferramenta foi transformada em um processo automático, com a execução do script Python via prompt de comando( CMD) acionanda pelo Power Automate, garantindo a extração dos itens similares sem necessidade de intervenção manual.
 
-É importante dizer que foram desenvolvidos dois scripts, uma para materiais e outro para medicamentos, considerando que os itens possuem características unicas que devem ser consideradas no desenvolvimento.
+É importante dizer que foram desenvolvidos dois scripts, uma para materiais e outro para medicamentos, considerando que os itens possuem características únicas que devem ser consideradas no desenvolvimento.
 
 ## **3.0 Ferramentas utilizadas**
 
-<img src="https://github.com/user-attachments/assets/a509fb5d-3588-4026-8677-441fea04f59e" width="800"/>
+- Pasta local: Repositório de dados que será o input de dados do hospital novo no script. 
 
-- Pasta local: Repositório de dados input no script. 
-
-- SQL: Utilizado para construção da bases de dados de cadastro padão.
+- SQL: Utilizado para construção da base de dados de cadastro padrão.
 
 - Python: Utilizado para o processamento dos dados. É importante dizer que foi utilizado o ambiente Anaconda com as seguintes bibliotecas:
     - cx_Oracle
@@ -47,15 +45,15 @@ Essa ferramenta foi transformada em um processo automático, com a execução do
     - difflib import SequenceMatcher
     - re
 
-- Power Automate: Responsável pela automação da execução do script Python via prompt de comando (CMD).
+- Power Automate: Responsável por automatizar a execução do script em Python por meio do prompt de comando (CMD).
 
-- Teams: Criação de grupo para ser trigger do start da aplição no power automate.
+- Microsoft Teams: Criação de um grupo no Teams, onde o envio de uma palavra-chave específica atua como gatilho (trigger) para a automação no Power Automate.
   
 ## **4.0 Desenvolvimento**
 
 ### 4.1 Módulos python
 
-Os módulos similaridade_por_descricao_mat_codigo_oficial.py e similaridade_por_descricao_med_codigo_oficial são o core da aplicação, suas funcionalidades principais são:
+Os módulos similaridade_por_descricao_mat_codigo_oficial.py e similaridade_por_descricao_med_codigo_oficial.py são o core da aplicação, suas funcionalidades principais são:
 
 **4.1.1 Conexão e leitura de dados**:
   - Integração com banco de dados Oracle e leitura de arquivos Excel.
@@ -99,3 +97,5 @@ Na pasta local o usário preenche um template com as informações do novo hospi
 Após preencher o template, o usuário digita uma palavra chave no grupo do teams e inicia a execução do script python. 
 
 ## **5.0 Resultados**
+
+No ano de 2024, foram gerados 14 arquivos de similaridade como parte do processo de migração dos cadastros hospitalares. Até abril de 2025, esse número já soma 11 arquivos. Esses resultados facilitaram significativamente a operação da equipe de cadastro de itens, que agora não precisa mais realizar buscas manuais em uma base extensa. Em vez disso, a equipe verifica apenas os apontamentos indicados nos arquivos, otimizando tempo e reduzindo erros operacionais.
