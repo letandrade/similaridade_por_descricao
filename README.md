@@ -28,6 +28,7 @@ Essa ferramenta foi transformada em um processo automático, com a execução do
 
 ## **3.0 Ferramentas utilizadas**
 
+![ChatGPT Image 14 de mai  de 2025, 14_44_03](https://github.com/user-attachments/assets/2ab809f2-29d0-4fc4-8d81-f41bde8d204c)
 
 
 - Pasta local: Repositório de dados input no script. 
