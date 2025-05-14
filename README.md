@@ -48,32 +48,35 @@ Essa rotina de criação dos modelos foi transformada em um processo automático
   
 ## **4.0 Desenvolvimento**
 
-Todos os passos a seguir estão detalhados nos módulos e arquivos de texto em anexo.
+Todos os passos a seguir estão detalhados nos módulos em anexo.
 
-O módulo modulo_apriori_hospital_recente.py aplica o algoritmo Apriori para identificar padrões recorrentes em glosas hospitalares. Ele analisa combinações frequentes de variáveis como tipo de despesa, setor, grupo e tipo de atendimento — por hospital, convênio e tipo de glosa — para apoiar ações estratégicas de auditoria e redução de glosas.
+Os módulos similaridade_por_descricao_mat_codigo_oficial.py  e similaridade_por_descricao_mat_codigo_oficial aplicam .........
 
 Funcionalidades principais:
 
 **4.1 Conexão e leitura de dados**:
   - Integração com banco de dados Oracle e leitura de arquivos Excel.
-  - Importação de dados do hospital adquirido e da base padrão.
+  - Importação de dados do hospital adquirido (xlsx) e da base padrão (tabela no banco de dados).
 
 **4.2 Pré-processamento das descrições**:
   - Remoção de acentos, caracteres especiais, stop words e padronização textual.
 
 **4.3 Cálculo de similaridade**:
+
   - Comparação baseada em múltiplos critérios:
-    - Quantidade de palavras em comum.
-    - Peso das primeiras palavras.
-    - Similaridade de medidas (alfa-numéricas e numéricas).
-    - Similaridade por sequência de caracteres (via `SequenceMatcher`).
-  - Cálculo de **score final de similaridade** e priorização dos pares mais relevantes.
+    - Similaridade de palavras (apenas letras).
+    - Similaridade de medidas (numéricas).
+    - Similaridade das primeiras 4 palavras.
+      
+  - Cálculo de **score final de similaridade para materiais**:
+    - (Similaridade de palavras * 5 + Similaridade das primeiras palavras * 2 + Similaridade de medidas * 3) / 10
+   
+ - Cálculo de **score final de similaridade para medicamentos**:
+    - (Similaridade de palavras * 5 + Similaridade das primeiras palavras * 2 + Similaridade de medidas * 3) / 10
 
 **4.4 Geração de resultados**:
   - União dos dados com códigos e valores oficiais.
   - Exportação do resultado final em Excel, com os códigos sugeridos para cobrança.
-
-
 
 ### **4.4 Agendamento do script de loop no Windows**
 
